@@ -1,0 +1,52 @@
+mixin tile(label, image, videoUrl)
+  a.card.ml-2.mr-2(href=videoUrl target="_blank" class!=attributes.class)
+    img.card-img-top(src='images/'+image alt="skill demonstration")
+    .card-body
+      p.card-text.text-center= label
+
+doctype html
+html(lang="en")
+  head
+    title Splash Skill Sequence
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="shortcut icon" href="http://www.splashfoundation.org/assets/favicon.png")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous")
+    link(rel="stylesheet" href="splash.css")
+
+  body.format-progression
+    nav.navbar.navbar-dark.fixed-top.bg-dark
+      .btn-toolbar.mt-2.mb-2(role="toolbar" aria-label="Toolbar with button groups")
+        .input-group.mr-2
+          select.form-control#format-selector
+            option(value="format-progression") Skill Progression
+            option(value="format-lesson") Lesson Plans
+
+        .btn-group.mr-2(role="group" aria-label="Week of Session")
+          button.btn.btn-secondary(type="button") Week 1
+          button.btn.btn-secondary(type="button") 2
+          button.btn.btn-secondary(type="button") 3
+          button.btn.btn-secondary(type="button") 4
+          button.btn.btn-secondary(type="button") 5
+          button.btn.btn-secondary(type="button") 6
+          button.btn.btn-secondary(type="button") 7
+          button.btn.btn-secondary(type="button") All
+
+        .btn-group.mr-2(role="group" aria-label="Student Groups")
+          button.btn.btn-secondary(type="button") Group 1
+          button.btn.btn-secondary(type="button") 2
+          button.btn.btn-secondary(type="button") 3
+
+    main(role="main")
+      .container
+        h1 Breath, Buoyancy, and Water Comfort
+        h2 Familiarization
+        h3.basic Pool Surroundings
+        .row
+          +tile('Hazards', 'placeholder.png', 'https://www.youtube.com/watch?v=bqUOuyHIvu4')(class='w1')
+          +tile('Changes in Terrain', 'placeholder.png', 'https://www.youtube.com/watch?v=bqUOuyHIvu4')(class='w1')
+          +tile('Slipping', 'placeholder.png', 'https://www.youtube.com/watch?v=bqUOuyHIvu4')(class='w1')
+
+
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="splash.js")
