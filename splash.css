@@ -23,8 +23,29 @@ h3 {
   font-size: 1.4em;
 }
 
+h3 i.fa-youtube-play {
+  color: red;
+}
+
+h3.basic:after {
+  content: 'Basic';
+  float: right;
+  color: green;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3.tested:after {
+  content: 'Tested';
+  float: right;
+  color: blue;
+  font-weight: normal;
+  font-style: normal;
+}
+
 img.card-img-top {
-  width: 200px;
+  width: 180px;
+  object-fit: cover;
 }
 
 .card-body {

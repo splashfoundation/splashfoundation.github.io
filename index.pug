@@ -1,8 +1,14 @@
 mixin tile(label, image, videoUrl)
-  a.card.ml-2.mr-2(href=videoUrl target="_blank" class!=attributes.class)
-    img.card-img-top(src='images/'+image alt="skill demonstration")
-    .card-body
-      p.card-text.text-center= label
+  if videoUrl
+    a.card.ml-2.mr-2.mb-5(href=videoUrl target="_blank" class!=attributes.class)
+      img.card-img-top(src='images/'+image alt="skill demonstration" width="200" height="200")
+      .card-body
+        p.card-text.text-center= label
+  else
+    .card.ml-2.mr-2.mb-5(class!=attributes.class)
+      img.card-img-top(src='images/'+image alt="skill demonstration" width="180" height="180")
+      .card-body
+        p.card-text.text-center= label
 
 doctype html
 html(lang="en")
@@ -12,40 +18,89 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     link(rel="shortcut icon" href="http://www.splashfoundation.org/assets/favicon.png")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel="stylesheet" href="splash.css")
 
   body.format-progression
     nav.navbar.navbar-dark.fixed-top.bg-dark
-      .btn-toolbar.mt-2.mb-2(role="toolbar" aria-label="Toolbar with button groups")
-        .input-group.mr-2
+      .btn-toolbar.mt-2(role="toolbar" aria-label="Toolbar with button groups")
+        .input-group.mr-2.mb-2
           select.form-control#format-selector
             option(value="format-progression") Skill Progression
-            option(value="format-lesson") Lesson Plans
+            option(value="format-lesson" disabled) Lesson Plans
 
-        .btn-group.mr-2(role="group" aria-label="Week of Session")
-          button.btn.btn-secondary(type="button") Week 1
-          button.btn.btn-secondary(type="button") 2
-          button.btn.btn-secondary(type="button") 3
-          button.btn.btn-secondary(type="button") 4
-          button.btn.btn-secondary(type="button") 5
-          button.btn.btn-secondary(type="button") 6
-          button.btn.btn-secondary(type="button") 7
-          button.btn.btn-secondary(type="button") All
+        .btn-group.mr-2.mb-2(role="group" aria-label="Week of Session")
+          button.btn.btn-outline-primary(type="button") Week 1
+          button.btn.btn-outline-primary(type="button") 2
+          button.btn.btn-outline-primary(type="button") 3
+          button.btn.btn-outline-primary(type="button") 4
+          button.btn.btn-outline-primary(type="button") 5
+          button.btn.btn-outline-primary(type="button") 6
+          button.btn.btn-outline-primary(type="button") 7
+          button.btn.btn-primary(type="button") All
 
-        .btn-group.mr-2(role="group" aria-label="Student Groups")
-          button.btn.btn-secondary(type="button") Group 1
-          button.btn.btn-secondary(type="button") 2
-          button.btn.btn-secondary(type="button") 3
+        .btn-group.mr-2.mb-2(role="group" aria-label="Student Groups")
+          button.btn.btn-outline-info(type="button") Group 1
+          button.btn.btn-outline-info(type="button") 2
+          button.btn.btn-info(type="button") 3
 
-    main(role="main")
-      .container
-        h1 Breath, Buoyancy, and Water Comfort
-        h2 Familiarization
-        h3.basic Pool Surroundings
-        .row
-          +tile('Hazards', 'placeholder.png', 'https://www.youtube.com/watch?v=bqUOuyHIvu4')(class='w1')
-          +tile('Changes in Terrain', 'placeholder.png', 'https://www.youtube.com/watch?v=bqUOuyHIvu4')(class='w1')
-          +tile('Slipping', 'placeholder.png', 'https://www.youtube.com/watch?v=bqUOuyHIvu4')(class='w1')
+    //- https://www.youtube.com/playlist?list=PLtsHor-YCc9oogKwIpRTzEiDW8oJeur9G
+    main.container(role="main")
+      p.text-center
+        small
+          | Find the full sequence of Splash Swim Skills Instructional Videos
+          a(href="https://www.youtube.com/playlist?list=PLtsHor-YCc9oogKwIpRTzEiDW8oJeur9G")  in this YouTube playlist.
+      h1 Breath, Buoyancy, and Water Comfort
+      h2 Familiarization
+      h3.basic Pool Surroundings
+      .row
+        +tile('Hazards', 'placeholder.png')(class='w1')
+        +tile('Changes in Terrain', 'placeholder.png')(class='w1')
+        +tile('Slipping', 'placeholder.png')(class='w1')
+      h3.basic Water / Pool Properties
+      .row
+        +tile('Temperature', '02-temperature.jpg')(class='w1')
+        +tile('Depth', '02-depth.jpg')(class='w1')
+        +tile('Wall, Gutter, Drain', '02-wall.jpg')(class='w1')
+        +tile('Lane Lines', '02-lanelines.jpg')(class='w1')
+      h3.basic Safety Devices / Help
+      .row
+        +tile('Floats', '03-floats.jpg')(class='w1')
+        +tile('Lifeguards', '03-lifeguards.jpg')(class='w1')
+        +tile('Ladders', '03-ladders.jpg')(class='w1')
+      h2 Entry/Exit
+      p Progress from the shallow end, to mid-pool, to the deep end.
+      h3.basic
+        | Entry
+        a.ml-1(href="https://youtu.be/R40r7pcvZhE" target="_blank")
+          i.fa.fa-youtube-play
+      .row
+        +tile('Sit', '04-sit.jpg')(class='w1 w2 w3')
+        +tile('Lay', '04-lay.jpg')(class='w1 w2 w3')
+        +tile('Slide', '04-slide.jpg')(class='w1 w2 w3')
+        +tile('Jump Down', '04-jumpdown.jpg')(class='w1 w2 w3')
+      h3.basic
+        | Exit
+        a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=15s" target="_blank")
+          i.fa.fa-youtube-play
+      .row
+        +tile('Pull Up', '05-pullup.jpg')(class='w1')
+        +tile('Lean Forward', '05-lean.jpg')(class='w1')
+        +tile('Knee Out', '05-knee.jpg')(class='w1')
+        +tile('Push Up', '05-pushup.jpg')(class='w1')
+      h2 Breath Control
+      h3.tested
+        | Hold Breath
+        a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=40s" target="_blank")
+          i.fa.fa-youtube-play
+      .row
+        +tile('Sip Air, Close Mouth', '06-sip.jpg')(class='w1')
+      h3.tested
+        | Nose Bubbles
+        a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=1m19s" target="_blank")
+          i.fa.fa-youtube-play
+      .row
+        +tile('Humming', '06-humming.jpg')(class='w2')
 
 
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
