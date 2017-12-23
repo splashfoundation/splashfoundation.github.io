@@ -57,3 +57,9 @@ img.card-img-top {
 a.card:hover {
   text-decoration: none;
 }
+
+p {
+  margin-bottom: 0;
+  padding-left: 0.5rem;
+  width: 100%;
+}

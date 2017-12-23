@@ -1,11 +1,11 @@
 mixin tile(label, image, videoUrl)
   if videoUrl
-    a.card.ml-2.mr-2.mb-5(href=videoUrl target="_blank" class!=attributes.class)
+    a.card.ml-2.mr-2.mb-2(href=videoUrl target="_blank" class!=attributes.class)
       img.card-img-top(src='images/'+image alt="skill demonstration" width="200" height="200")
       .card-body
         p.card-text.text-center= label
   else
-    .card.ml-2.mr-2.mb-5(class!=attributes.class)
+    .card.ml-2.mr-2.mb-2(class!=attributes.class)
       img.card-img-top(src='images/'+image alt="skill demonstration" width="180" height="180")
       .card-body
         p.card-text.text-center= label
@@ -53,18 +53,18 @@ html(lang="en")
       h1 Breath, Buoyancy, and Water Comfort
       h2 Familiarization
       h3.basic Pool Surroundings
-      .row
+      .row.mb-5
         +tile('Hazards', 'placeholder.png')(class='w1')
         +tile('Changes in Terrain', 'placeholder.png')(class='w1')
         +tile('Slipping', 'placeholder.png')(class='w1')
       h3.basic Water / Pool Properties
-      .row
+      .row.mb-5
         +tile('Temperature', '02-temperature.jpg')(class='w1')
         +tile('Depth', '02-depth.jpg')(class='w1')
         +tile('Wall, Gutter, Drain', '02-wall.jpg')(class='w1')
         +tile('Lane Lines', '02-lanelines.jpg')(class='w1')
       h3.basic Safety Devices / Help
-      .row
+      .row.mb-5
         +tile('Floats', '03-floats.jpg')(class='w1')
         +tile('Lifeguards', '03-lifeguards.jpg')(class='w1')
         +tile('Ladders', '03-ladders.jpg')(class='w1')
@@ -74,7 +74,7 @@ html(lang="en")
         | Entry
         a.ml-1(href="https://youtu.be/R40r7pcvZhE" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Sit', '04-sit.jpg')(class='w1 w2 w3')
         +tile('Lay', '04-lay.jpg')(class='w1 w2 w3')
         +tile('Slide', '04-slide.jpg')(class='w1 w2 w3')
@@ -83,7 +83,7 @@ html(lang="en")
         | Exit
         a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=15s" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Pull Up', '05-pullup.jpg')(class='w1')
         +tile('Lean Forward', '05-lean.jpg')(class='w1')
         +tile('Knee Out', '05-knee.jpg')(class='w1')
@@ -95,14 +95,14 @@ html(lang="en")
             | Hold Breath
             a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=40s" target="_blank")
               i.fa.fa-youtube-play
-          .row
+          .row.mb-5
             +tile('Sip Air, Close Mouth', '06-sip.jpg')(class='w1')
         .col
           h3.tested
             | Nose Bubbles
             a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=1m19s" target="_blank")
               i.fa.fa-youtube-play
-          .row
+          .row.mb-5
             +tile('Humming', '06-humming.jpg')(class='w2')
       h2 Submersions
       p Progress from holding breath to nose bubbles – differentiate when to use.
@@ -111,20 +111,20 @@ html(lang="en")
         a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=38s" target="_blank")
           i.fa.fa-youtube-play
       p Progress from shallow end, to mid-pool, to deep end.
-      .row
+      .row.mb-5
         +tile('Mouth - Nose - Head', '07-head.jpg')(class='')
         +tile('Surface Bob (Leg Lift)', '07-bob.jpg')(class='')
         +tile('Sink Down*', '07-sink.jpg')(class='')
         +tile('Assisted Step In**', '07-assisted.jpg')(class='')
-      p
-        small *progress to wall-assisted vertical kick then kick up to surface in deep-end
-      p
-        small **progress shallow, platform mid-pool, deep-end
+        p
+          small *progress to wall-assisted vertical kick then kick up to surface in deep-end
+        p
+          small **progress shallow, platform mid-pool, deep-end
       h3.tested
         | Head First
         a.ml-1(href="https://youtu.be/R40r7pcvZhE?t=1m36s" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Hoop', '08-hoop.jpg')(class='')
         +tile('Duck Dives', '08-duckdives.jpg')(class='')
         +tile('Dolphins / Retrievals', '08-dolphins.jpg')(class='')
@@ -133,7 +133,7 @@ html(lang="en")
         | Hand movements – Sculling (Standing Only)
         a.ml-1(href="https://youtu.be/hlv5DGXA1bw" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Push Down', '09-push.jpg')(class='')
         +tile('Scoop Up', '09-scoop.jpg')(class='')
         +tile('Side Sweep to Feet', '09-sweep.jpg')(class='')
@@ -144,7 +144,7 @@ html(lang="en")
         | From Front Float
         a.ml-1(href="https://youtu.be/hlv5DGXA1bw?t=57s" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Knees In', '10-kneesin.jpg')(class='')
         +tile('Push Down', '10-pushdown.jpg')(class='')
         +tile('Look at Feet', '10-lookfeet.jpg')(class='')
@@ -153,7 +153,7 @@ html(lang="en")
         | From Back Float
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Knees In', '11-kneesin.jpg')(class='')
         +tile('Curl Stomach', '11-curl.jpg')(class='')
         +tile('Scoop Up', '11-scoop.jpg')(class='')
@@ -166,33 +166,33 @@ html(lang="en")
         | Assisted Superman
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Hold On, Extend, Look Down', '12-holdon.jpg')(class='')
         +tile('???', '12-2.jpg')(class='')
       h3.tested
         | Jellyfish
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Hang Like a Cat', 'placeholder.png')(class='')
         +tile('Extend into Superman', 'placeholder.png')(class='')
       h3.tested
         | Superman Glide
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Jump', 'placeholder.png')(class='')
         +tile('Push from Wall', '14-push.jpg')(class='')
         +tile('Add Light Kick*', '14-kick.jpg')(class='')
-      p
-        small *long legs, narrow gap, small and quick feet
+        p
+          small *long legs, narrow gap, small and quick feet
       h2 Back Float and Backward Movement
       p Return to standing from each position.
       h3.tested
         | Back Float
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Wall-Assisted', 'placeholder.png')(class='')
         +tile('Lay back', '15-lay.jpg')(class='')
         +tile('Extended', '15-extended.jpg')(class='')
@@ -201,22 +201,22 @@ html(lang="en")
         +tile('Submerge & surface (deep)', '15-submergedeep.jpg')(class='')
         +tile('Step-in & surface (shallow)', '15-stepshallow.jpg')(class='')
         +tile('Step-in & surface (deep)', '15-stepdeep.jpg')(class='')
-      p
-        small *progress to wall-assisted vertical kick then kick up to surface in deep-end
-      p
-        small **progress shallow, platform mid-pool, deep-end
+        p
+          small *progress to wall-assisted vertical kick then kick up to surface in deep-end
+        p
+          small **progress shallow, platform mid-pool, deep-end
       h3.tested
         | Backward Movement
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Side Sweep to Feet', '16-sweep.jpg')(class='')
       h2 Back Float to Front Float
       h3.tested
         | Roll from Back to Front
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Back Float', '17-float.jpg')(class='')
         +tile('Eyes, Shoulder, Hip Roll Over', '17-roll.jpg')(class='')
         +tile('Nose Bubbles', '17-bubbles.jpg')(class='')
@@ -228,7 +228,7 @@ html(lang="en")
         | Hand Entry
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Spear', '18-spear.jpg')(class='')
         +tile('Spear (alternate view)', '18-spearalt.jpg')(class='')
         +tile('Superman', '18-superman.jpg')(class='')
@@ -236,7 +236,7 @@ html(lang="en")
         | Arm Stroke
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Superman', '19-superman.jpg')(class='')
         +tile('Warrior', '19-warrior.jpg')(class='')
       h2 Freestyle Progression
@@ -245,7 +245,7 @@ html(lang="en")
         | Warrior Roll
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Superman', '19-superman.jpg')(class='')
         +tile('Warrior', '19-warrior.jpg')(class='')
         +tile('Roll to Breathe', '20-roll.jpg')(class='')
@@ -254,7 +254,7 @@ html(lang="en")
         | Single-Arm Superman
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Superman', 'placeholder.png')(class='')
         +tile('Warrior', 'placeholder.png')(class='')
         +tile('Spear to Superman', 'placeholder.png')(class='')
@@ -263,7 +263,7 @@ html(lang="en")
         small (breathe every 2)
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Superman', 'placeholder.png')(class='')
         +tile('Warrior', 'placeholder.png')(class='')
         +tile('Spear to Superman', 'placeholder.png')(class='')
@@ -273,7 +273,7 @@ html(lang="en")
         small (breathe every 4)
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Superman', 'placeholder.png')(class='')
         +tile('Warrior', 'placeholder.png')(class='')
         +tile('Spear to Superman', 'placeholder.png')(class='')
@@ -283,7 +283,7 @@ html(lang="en")
         small (breathe every 4)
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Warrior Roll', 'placeholder.png')(class='')
         +tile('Single-Arm Superman', 'placeholder.png')(class='')
         +tile('Catch-Up (every 2)', 'placeholder.png')(class='')
@@ -293,11 +293,11 @@ html(lang="en")
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
       p Breathe every 3 strokes.
-      .row
+      .row.mb-5
         +tile('Catch-Up', 'placeholder.png')(class='')
         +tile('¾ Catch-Up*', 'placeholder.png')(class='')
-      p
-        small *continuous arm movement
+        p
+          small *continuous arm movement
 
       h1 Rotations and Backstroke Progression
       h2 Body Position and Balance
@@ -305,18 +305,18 @@ html(lang="en")
         | Back Rotations
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Right Side Tilt*', 'placeholder.png')(class='')
         +tile('Left Side Tilt*', 'placeholder.png')(class='')
         +tile('Side to side rotations, 1-2-3 timing', 'placeholder.png')(class='')
-      p
-        small *head still, shoulder/hip slightly above water
+        p
+          small *head still, shoulder/hip slightly above water
       h2 Arm Movement
       h3.expert
         | Arm Strokes
         a.ml-1(href="" target="_blank")
           i.fa.fa-youtube-play
-      .row
+      .row.mb-5
         +tile('Warrior on Back', 'placeholder.png')(class='')
         +tile('1-Stroke Switch', 'placeholder.png')(class='')
         +tile('Continuous Strokes (Backstroke)', 'placeholder.png')(class='')
