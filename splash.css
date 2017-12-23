@@ -60,6 +60,9 @@ a.card:hover {
 
 p {
   margin-bottom: 0;
-  padding-left: 0.5rem;
   width: 100%;
+}
+
+p small {
+  margin-left: 0.5rem;
 }
