@@ -49,6 +49,7 @@ img.card-img-top {
 }
 
 .card-body {
+  width: 180px;
   color: black;
   padding: .5rem;
 }
