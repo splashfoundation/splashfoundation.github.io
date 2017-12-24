@@ -19,6 +19,7 @@ h2 {
 }
 
 h3 {
+  width: 100%;
   font-style: italic;
   font-size: 1.4em;
 }
@@ -95,4 +96,32 @@ body[data-group="3"] button[data-group="3"] {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
+}
+
+.row {
+  display: none;
+  padding: 0 1rem;
+}
+
+body[data-week="1"] .row.w1,
+body[data-week="2"] .row.w2,
+body[data-week="3"] .row.w3,
+body[data-week="4"] .row.w4,
+body[data-week="5"] .row.w5,
+body[data-week="6"] .row.w6,
+body[data-week="7"] .row.w7,
+body[data-week="8"] .row.w8,
+body[data-week="9"] .row.w9,
+body[data-week="10"] .row.w10,
+body[data-week="11"] .row.w11,
+body[data-week="12"] .row.w12,
+body[data-week="full"] .row.w1,
+body[data-week="full"] .row.w2,
+body[data-week="full"] .row.w3,
+body[data-week="full"] .row.w4,
+body[data-week="full"] .row.w5,
+body[data-week="full"] .row.w6,
+body[data-week="full"] .row.w7,
+body[data-week="full"] .row.w8 {
+  display: flex;
 }
