@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="splash.css">
   </head>
-  <body class="format-progression">
+  <body data-format="progression" data-week="full" data-group="3">
     <nav class="navbar navbar-dark fixed-top bg-dark">
       <div class="btn-toolbar mt-2" role="toolbar" aria-label="Toolbar with button groups">
         <div class="input-group mr-2 mb-2">
@@ -18,20 +18,20 @@
             <option value="format-lesson" disabled>Lesson Plans</option>
           </select>
         </div>
-        <div class="btn-group mr-2 mb-2" role="group" aria-label="Week of Session">
-          <button class="btn btn-outline-primary" type="button">Week 1</button>
-          <button class="btn btn-outline-primary" type="button">2</button>
-          <button class="btn btn-outline-primary" type="button">3</button>
-          <button class="btn btn-outline-primary" type="button">4</button>
-          <button class="btn btn-outline-primary" type="button">5</button>
-          <button class="btn btn-outline-primary" type="button">6</button>
-          <button class="btn btn-outline-primary" type="button">7</button>
-          <button class="btn btn-primary" type="button">All</button>
+        <div class="btn-group mr-2 mb-2" id="weeks" role="group" aria-label="Week of Session">
+          <button class="btn btn-outline-primary" type="button" data-week="1">Week 1</button>
+          <button class="btn btn-outline-primary" type="button" data-week="2">2</button>
+          <button class="btn btn-outline-primary" type="button" data-week="3">3</button>
+          <button class="btn btn-outline-primary" type="button" data-week="4">4</button>
+          <button class="btn btn-outline-primary" type="button" data-week="5">5</button>
+          <button class="btn btn-outline-primary" type="button" data-week="6">6</button>
+          <button class="btn btn-outline-primary" type="button" data-week="7">7</button>
+          <button class="btn btn-outline-primary" type="button" data-week="full">All</button>
         </div>
-        <div class="btn-group mr-2 mb-2" role="group" aria-label="Student Groups">
-          <button class="btn btn-outline-info" type="button">Group 1</button>
-          <button class="btn btn-outline-info" type="button">2</button>
-          <button class="btn btn-info" type="button">3</button>
+        <div class="btn-group mr-2 mb-2" id="groups" role="group" aria-label="Student Groups">
+          <button class="btn btn-outline-info" type="button" data-group="1">Group 1</button>
+          <button class="btn btn-outline-info" type="button" data-group="2">2</button>
+          <button class="btn btn-outline-info" type="button" data-group="3">3</button>
         </div>
       </div>
     </nav>

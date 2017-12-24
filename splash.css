@@ -66,3 +66,33 @@ p {
 p small {
   margin-left: 0.5rem;
 }
+
+button {
+  cursor: pointer;
+}
+
+body[data-week="1"] button[data-week="1"],
+body[data-week="2"] button[data-week="2"],
+body[data-week="3"] button[data-week="3"],
+body[data-week="4"] button[data-week="4"],
+body[data-week="5"] button[data-week="5"],
+body[data-week="6"] button[data-week="6"],
+body[data-week="7"] button[data-week="7"],
+body[data-week="8"] button[data-week="8"],
+body[data-week="9"] button[data-week="9"],
+body[data-week="10"] button[data-week="10"],
+body[data-week="11"] button[data-week="11"],
+body[data-week="12"] button[data-week="12"],
+body[data-week="full"] button[data-week="full"] {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+body[data-group="1"] button[data-group="1"],
+body[data-group="2"] button[data-group="2"],
+body[data-group="3"] button[data-group="3"] {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
