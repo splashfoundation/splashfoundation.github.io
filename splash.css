@@ -99,7 +99,7 @@ body[data-group="3"] button[data-group="3"] {
 }
 
 .row {
-  display: none;
+  /* display: none; */
   padding: 0 1rem;
 }
 
